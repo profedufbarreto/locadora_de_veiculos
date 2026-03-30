@@ -3,28 +3,38 @@ import { Car, Bike, Zap, Search, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const vehiclesData = [
-  { id: 1, name: 'Sedan Premium 2024', category: 'carro', price: 250, image: 'https://images.unsplash.com/photo-1555353540-64580b51c258?auto=format&fit=crop&q=80&w=800' },
-  { id: 2, name: 'SUV Adventure 4x4', category: 'carro', price: 380, image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800' },
+  // CARROS
+  { id: 1, name: 'Honda Civic Premium', category: 'carro', price: 250, image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800' },
+  { id: 2, name: 'Jeep Wrangler 4x4', category: 'carro', price: 380, image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800' },
   { id: 3, name: 'Tesla Model S Plaid', category: 'carro', price: 650, image: 'https://images.unsplash.com/photo-1617788138017-80ad42243c7d?auto=format&fit=crop&q=80&w=800' },
   { id: 4, name: 'Porsche 911 Carrera', category: 'carro', price: 1200, image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800' },
-  { id: 13, name: 'Audi RS6 Avant', category: 'carro', price: 1500, image: 'https://images.unsplash.com/photo-1606148651410-6ed28723652c?auto=format&fit=crop&q=80&w=800' },
-  { id: 14, name: 'Mini Cooper S', category: 'carro', price: 350, image: 'https://images.unsplash.com/photo-1593055416805-34098616fa1f?auto=format&fit=crop&q=80&w=800' },
-  { id: 15, name: 'Ford Mustang Mach-E', category: 'carro', price: 800, image: 'https://images.unsplash.com/photo-1620210214275-8ce698beab23?auto=format&fit=crop&q=80&w=800' },
-  { id: 5, name: 'Sport Bike 600cc', category: 'moto', price: 180, image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800' },
-  { id: 6, name: 'Ducati Panigale V4', category: 'moto', price: 850, image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800' },
-  { id: 7, name: 'BMW R1250 GS Adventure', category: 'moto', price: 420, image: 'https://images.unsplash.com/photo-1591637333184-1d1354366668?auto=format&fit=crop&q=80&w=800' },
-  { id: 16, name: 'Yamaha MT-07', category: 'moto', price: 280, image: 'https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=800' },
-  { id: 17, name: 'KTM 390 Duke', category: 'moto', price: 220, image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800' },
-  { id: 8, name: 'Moto Elétrica Neon Pro', category: 'moto_eletrica', price: 120, image: 'https://images.unsplash.com/photo-1591438128445-4c573d74ac45?auto=format&fit=crop&q=80&w=800' },
-  { id: 18, name: 'Super Soco TC Max', category: 'motos_urbanas', price: 160, image: 'https://images.unsplash.com/photo-1614165933390-349ede2588fe?auto=format&fit=crop&q=80&w=800' },
-  { id: 19, name: 'NIU NQi GTS Sport', category: 'motos_urbanas', price: 140, image: 'https://images.unsplash.com/photo-1591438128445-4c573d74ac45?auto=format&fit=crop&q=80&w=800' },
-  { id: 9, name: 'Patinete Pro G3', category: 'patinete', price: 45, image: 'https://images.unsplash.com/photo-1597435480211-e408f6a97800?auto=format&fit=crop&q=80&w=800' },
-  { id: 10, name: 'Segway Ninebot Max', category: 'patinete', price: 65, image: 'https://images.unsplash.com/photo-1605203305419-54316dce8f81?auto=format&fit=crop&q=80&w=800' },
-  { id: 20, name: 'Unagi Model One E500', category: 'patinete', price: 85, image: 'https://images.unsplash.com/photo-1597435480211-e408f6a97800?auto=format&fit=crop&q=80&w=800' },
-  { id: 11, name: 'Mercedes Sprinter Horizon', category: 'motorhome', price: 1100, image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=800' },
-  { id: 12, name: 'VW California 6.1', category: 'motorhome', price: 950, image: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&q=80&w=800' },
-  { id: 21, name: 'Airstream Interstate 24X', category: 'motorhome', price: 1800, image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=800' },
-  { id: 22, name: 'Ford Transit Custom Nugget', category: 'motorhome', price: 850, image: 'https://images.unsplash.com/photo-1513313778780-9ae4807465f0?auto=format&fit=crop&q=80&w=800' },
+  { id: 5, name: 'Audi RS6 Avant', category: 'carro', price: 1500, image: 'https://images.unsplash.com/photo-1606148651410-6ed28723652c?auto=format&fit=crop&q=80&w=800' },
+  { id: 6, name: 'Mini Cooper S', category: 'carro', price: 350, image: 'https://images.unsplash.com/photo-1593055416805-34098616fa1f?auto=format&fit=crop&q=80&w=800' },
+  { id: 7, name: 'Ford Mustang Mach-E', category: 'carro', price: 800, image: 'https://images.unsplash.com/photo-1605898862351-a1e649bd123f?auto=format&fit=crop&q=80&w=800' },
+  { id: 23, name: 'Land Rover Defender', category: 'carro', price: 550, image: 'https://images.unsplash.com/photo-1567117632960-56e34a4c2456?auto=format&fit=crop&q=80&w=800' },
+  
+  // MOTOS
+  { id: 8, name: 'Sport Bike Ninja', category: 'moto', price: 180, image: 'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&q=80&w=800' },
+  { id: 9, name: 'Ducati Panigale V4', category: 'moto', price: 850, image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800' },
+  { id: 10, name: 'BMW R1250 GS Adv', category: 'moto', price: 420, image: 'https://images.unsplash.com/photo-1591637333184-1d1354366668?auto=format&fit=crop&q=80&w=800' },
+  { id: 11, name: 'Yamaha MT-07 Sport', category: 'moto', price: 280, image: 'https://images.unsplash.com/photo-1601334674068-ba287669d033?auto=format&fit=crop&q=80&w=800' },
+  { id: 12, name: 'KTM 390 Duke', category: 'moto', price: 220, image: 'https://images.unsplash.com/photo-1558981001-57640166665e?auto=format&fit=crop&q=80&w=800' },
+  
+  // MOTOS ELÉTRICAS & URBANAS
+  { id: 13, name: 'Moto Elétrica Neon Pro', category: 'moto_eletrica', price: 120, image: 'https://images.unsplash.com/photo-1591438128445-4c573d74ac45?auto=format&fit=crop&q=80&w=800' },
+  { id: 14, name: 'Super Soco TC Max', category: 'motos_urbanas', price: 160, image: 'https://images.unsplash.com/photo-1614165933390-349ede2588fe?auto=format&fit=crop&q=80&w=800' },
+  { id: 15, name: 'NIU NQi GTS Sport', category: 'motos_urbanas', price: 140, image: 'https://images.unsplash.com/photo-1620436402432-841f3d8a67bd?auto=format&fit=crop&q=80&w=800' },
+  
+  // PATINETES
+  { id: 16, name: 'Patinete Pro G3', category: 'patinete', price: 45, image: 'https://images.unsplash.com/photo-1597435480211-e408f6a97800?auto=format&fit=crop&q=80&w=800' },
+  { id: 17, name: 'Segway Ninebot Max', category: 'patinete', price: 65, image: 'https://images.unsplash.com/photo-1605203305419-54316dce8f81?auto=format&fit=crop&q=80&w=800' },
+  { id: 18, name: 'Unagi Model One E500', category: 'patinete', price: 85, image: 'https://images.unsplash.com/photo-1594914141203-34e2c81a293c?auto=format&fit=crop&q=80&w=800' },
+  
+  // MOTORHOMES
+  { id: 19, name: 'Mercedes Sprinter Camper', category: 'motorhome', price: 1100, image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=800' },
+  { id: 20, name: 'VW California 6.1', category: 'motorhome', price: 950, image: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&q=80&w=800' },
+  { id: 21, name: 'Airstream Interstate 24X', category: 'motorhome', price: 1800, image: 'https://images.unsplash.com/photo-1513313778780-9ae4807465f0?auto=format&fit=crop&q=80&w=800' },
+  { id: 22, name: 'Ford Transit Nugget', category: 'motorhome', price: 850, image: 'https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800' },
 ];
 
 const VehicleGrid = () => {
